@@ -386,6 +386,28 @@ function App() {
 
       <footer className="bg-sm-black text-gray-500 py-6 text-center text-sm border-t border-gray-800">
         <p>&copy; 2026 Self Machine. Todos os direitos reservados.</p>
+        <div className="mt-2 flex flex-col md:flex-row gap-2 md:gap-6 justify-center items-center text-gray-400 text-xs">
+          <span>
+            WhatsApp:{" "}
+            <a
+              href="https://wa.me/5511971174080"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm-orange font-bold"
+            >
+              (11) 97117-4080
+            </a>
+          </span>
+          <span>
+            Email:{" "}
+            <a
+              href="mailto:selfmachineop@gmail.com"
+              className="text-sm-orange font-bold"
+            >
+              selfmachineop@gmail.com
+            </a>
+          </span>
+        </div>
       </footer>
     </div>
   );
