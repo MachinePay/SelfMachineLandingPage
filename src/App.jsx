@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MockupClubKids from "./assets/mockupClubKids.png";
+import FundoModerno from "./assets/funtoModerno.jpeg";
 import logoSelfMachine from "./assets/SelfMachine - Logo.jpg";
 import {
   MessageCircle,
@@ -81,7 +82,18 @@ function App() {
       </header>
 
       {/* --- SEÇÃO DO VÍDEO --- */}
-      <section className="px-4 -mt-16 relative z-20 mb-16">
+      <section className="flex justify-center px-4 mt-16 relative mb-16 items-center text-center pl-10 pr-10 ml-8 mr-8 gap-20">
+        <div>
+          <h2 className="text-3xl font-bold text-sm-brown mb-3 text-center justify-center items-center">
+            Veja como o SelfMachine pode transformar seu controle de estoque
+          </h2>
+          <p className="text-base md:text-lg text-gray-700 max-w-md mx-auto mb-6">
+            Somos especialistas em automação e tecnologia para pequenos e médios
+            negócios. Ajudamos empresas a terem mais controle, menos perdas e
+            decisões mais inteligentes, com sistemas sob medida, atendimento
+            humano e suporte 24h. Seu sucesso é o nosso compromisso.
+          </p>
+        </div>
         <VideoSection />
       </section>
 
@@ -161,6 +173,8 @@ function App() {
 
       {/* --- PROBLEMA → SOLUÇÃO --- */}
       <section className="py-16 px-4 bg-sm-black text-white text-center relative overflow-hidden">
+        {/* Overlay escuro para legibilidade */}
+        <div className="absolute inset-0 bg-black/70 z-0 pointer-events-none" />
         <div className="max-w-3xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-sm-orange">
             Seu negócio ainda depende de planilhas, papel ou sistemas limitados?
@@ -185,7 +199,7 @@ function App() {
           </a>
         </div>
         {/* Glow decorativo */}
-        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[500px] h-[200px] bg-gradient-to-t from-sm-orange/30 to-transparent rounded-full blur-2xl opacity-60 z-0"></div>
+        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[500px] h-[200px] bg-gradient-to-t from-sm-orange/30 to-transparent rounded-full blur-2xl opacity-60 z-10"></div>
       </section>
 
       {/* --- PARA QUEM É (Restaurada) --- */}
@@ -285,13 +299,20 @@ function App() {
       </section>
 
       {/* --- PROVA SOCIAL / AUTORIDADE --- */}
-      <section className="bg-sm-black py-20 px-4 text-center text-white border-b border-gray-900">
+      <section
+        className="bg-sm-black py-20 px-4 text-center text-white border-b border-gray-900"
+        style={{
+          backgroundImage: `url(${FundoModerno})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-sm-orange mb-10">
             Projetos personalizados para cada cliente
           </h2>
           <div className="flex flex-col md:flex-row gap-10 md:gap-6 justify-center items-center mb-10">
-            <div className="flex-1 bg-white/5 rounded-xl p-6 shadow-md border border-sm-orange/20">
+            <div className="flex-1 bg-black/60 rounded-xl p-6 shadow-md border border-sm-orange/20">
               <div className="text-4xl text-sm-orange mb-4">“</div>
               <p className="text-lg md:text-xl font-medium italic leading-relaxed mb-4">
                 O Self Machine organizou minha loja em uma semana. Antes eu
@@ -321,13 +342,13 @@ function App() {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <span className="bg-sm-orange/20 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
+            <span className="bg-black/80 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
               Projetos personalizados
             </span>
-            <span className="bg-sm-orange/20 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
+            <span className="bg-black/80 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
               Soluções para diferentes setores
             </span>
-            <span className="bg-sm-orange/20 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
+            <span className="bg-black/80 text-sm-orange px-4 py-2 rounded-full font-bold text-xs">
               Atendimento em todo o Brasil
             </span>
           </div>
