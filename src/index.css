@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Paleta Oficial Self Machine --- */
+  --color-sm-orange: #f3ac42; /* Cor principal (Neon/Botões) */
+  --color-sm-brown: #685245;  /* Cor secundária (Títulos em fundo claro) */
+  --color-sm-black: #000000;  /* Fundo Hero/Logo */
+  --color-sm-light: #fafafa;  /* Fundo da página */
+  
+  /* Variação para Hover (Laranja um pouco mais escuro) */
+  --color-sm-orange-hover: #d99a3b; 
+}
+
+/* Configurações Globais */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-sm-light);
+  color: var(--color-sm-black);
+}
+
+/* Ajuste de seleção de texto para combinar */
+::selection {
+  background-color: var(--color-sm-orange);
+  color: black;
+}
