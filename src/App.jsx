@@ -82,9 +82,9 @@ function App() {
       </header>
 
       {/* --- SEÇÃO DO VÍDEO --- */}
-      <section className="flex justify-center px-4 mt-16 relative mb-16 items-center text-center pl-10 pr-10 ml-8 mr-8 gap-20">
-        <div>
-          <h2 className="text-3xl font-bold text-sm-brown mb-3 text-center justify-center items-center">
+      <section className="flex flex-col md:flex-row justify-center items-center text-center px-4 md:pl-10 md:pr-10 md:ml-8 md:mr-8 mt-12 mb-12 gap-8 md:gap-20">
+        <div className="w-full md:w-auto mb-8 md:mb-0">
+          <h2 className="text-2xl md:text-3xl font-bold text-sm-brown mb-3 text-center">
             Veja como o SelfMachine pode transformar seu controle de estoque
           </h2>
           <p className="text-base md:text-lg text-gray-700 max-w-md mx-auto mb-6">
@@ -94,7 +94,9 @@ function App() {
             humano e suporte 24h. Seu sucesso é o nosso compromisso.
           </p>
         </div>
-        <VideoSection />
+        <div className="w-full md:w-auto flex justify-center">
+          <VideoSection />
+        </div>
       </section>
 
       {/* --- BENEFÍCIOS --- */}
