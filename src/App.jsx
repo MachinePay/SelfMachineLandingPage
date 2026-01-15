@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logoSelfMachine from "./assets/logoSelfmachine.png";
+import MockupClubKids from "./assets/mockupClubKids.png";
+import logoSelfMachine from "./assets/SelfMachine - Logo.jpg";
 import {
   MessageCircle,
   CheckCircle,
@@ -10,7 +11,7 @@ import {
 } from "lucide-react";
 
 function App() {
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5511971174080";
   const message =
     "Olá, gostaria de ver uma demonstração do sistema Self Machine para meu estoque.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -45,17 +46,14 @@ function App() {
           <img
             src={logoSelfMachine}
             alt="Logo Self Machine"
-            className="mx-auto mb-4 w-40 md:w-56"
+            className="mx-auto w-80"
             style={{ filter: "drop-shadow(0 2px 8px #F3AC42)" }}
           />
-          <div className="mb-8 font-bold text-2xl tracking-widest text-sm-orange uppercase flex justify-center items-center gap-2">
-            Self Machine
-          </div>
 
           {/* Headline com impacto */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(243,172,66,0.25)]">
-            Controle <span className="text-sm-orange">total</span> do seu
-            negócio em <span className="text-sm-orange">tempo real</span>
+            Controle <span className="text-sm-orange">Total</span> do seu
+            negócio em <span className="text-sm-orange">Tempo Real</span>
           </h1>
           <p className="text-2xl md:text-3xl text-gray-200 mb-10 max-w-2xl mx-auto font-semibold">
             Mais controle. Menos perdas.
@@ -168,7 +166,7 @@ function App() {
             Seu negócio ainda depende de planilhas, papel ou sistemas limitados?
           </h2>
           <p className="text-lg md:text-2xl mb-8 text-gray-200 font-medium">
-            Isso gera erros, retrabalho e perda de dinheiro.
+            Isso gera erros, mais trabalho e perda de dinheiro.
             <br />
             <span className="text-sm-orange font-bold">
               A SelfMachine cria o sistema certo para a sua operação.
@@ -210,7 +208,7 @@ function App() {
                 <li className="flex items-center gap-3 text-lg text-gray-700">
                   <CheckCircle className="text-sm-orange w-6 h-6 flex-shrink-0" />
                   <span>
-                    Empresas que usam <strong>planilha ou caderno</strong>
+                    Empresas que usam <strong>planilha ou papel</strong>
                   </span>
                 </li>
               </ul>
@@ -224,7 +222,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="inline-block bg-sm-brown text-white font-bold py-3 px-6 rounded-lg hover:bg-black transition-colors"
               >
-                É o meu caso (Testar Sistema)
+                É o meu caso (Testar o Sistema Gratuitamente)
               </a>
             </div>
           </div>
@@ -235,7 +233,7 @@ function App() {
       <section className="py-20 px-4 bg-white text-center border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-sm-brown mb-14">
-            Como funciona na prática
+            Como funciona na prática?
           </h2>
           <div className="flex flex-col md:flex-row gap-10 md:gap-6 justify-center items-center relative">
             <div className="flex-1 flex flex-col items-center">
@@ -265,6 +263,17 @@ function App() {
                 3
               </div>
               <h3 className="font-bold text-lg mb-2 text-sm-brown">
+                Suporte 24 horas
+              </h3>
+              <p className="text-gray-600">
+                Atendimento rápido e humano sempre que você precisar.
+              </p>
+            </div>
+            <div className="flex-1 flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-sm-orange text-sm-black flex items-center justify-center font-bold text-2xl mb-4 border-4 border-white shadow-lg z-10">
+                4
+              </div>
+              <h3 className="font-bold text-lg mb-2 text-sm-brown">
                 Você controla tudo fácil
               </h3>
               <p className="text-gray-600">
@@ -290,7 +299,7 @@ function App() {
                 pelo celular.
               </p>
               <div className="font-bold text-sm-orange mb-2">
-                — Carlos, Dono de Autopeças
+                — Rafael, Clube Kids
               </div>
               <p className="text-xs text-gray-300">
                 Soluções sob medida para diferentes setores
@@ -299,9 +308,12 @@ function App() {
             {/* Mockup/print do sistema (exemplo ilustrativo) */}
             <div className="flex-1 flex flex-col items-center justify-center">
               <div className="w-full h-48 bg-gray-800 rounded-lg flex items-center justify-center border-2 border-sm-orange/30 mb-2">
-                <span className="text-gray-400">
-                  [Print ou mockup do sistema aqui]
-                </span>
+                <img
+                  src={MockupClubKids}
+                  alt="Mockup do sistema SelfMachine"
+                  className="w-full h-full object-cover rounded-lg shadow-lg border border-sm-orange"
+                  style={{ maxHeight: "300px" }}
+                />
               </div>
               <span className="text-xs text-gray-400">
                 Demonstração visual do sistema SelfMachine
