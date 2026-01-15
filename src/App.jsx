@@ -373,31 +373,49 @@ function VideoSection() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="max-w-4xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden border-4 border-white aspect-video relative flex items-center justify-center">
-      {/* Verifica se deve mostrar o vídeo ou a capa */}
-      {showVideo ? (
-        <video
-          /* IMPORTANTE: Garanta que o arquivo está na pasta correta */
-          src="/src/assets/VideoExplicativo.mp4"
-          controls
-          autoPlay
-          className="w-full h-full object-cover"
-        />
-      ) : (
-        <div
-          className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center z-10 cursor-pointer group"
-          onClick={() => setShowVideo(true)}
-        >
-          {/* Fundo preto semitransparente (bg-black/60) e hover no grupo */}
-          <div className="w-20 h-20 bg-sm-orange rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-            <Play className="w-10 h-10 text-sm-black ml-1" fill="black" />
-          </div>
-          <p className="font-bold text-xl text-white">
-            Clique para assistir à apresentação
-          </p>
-          <p className="text-gray-400 text-sm mt-2">[Vídeo Demonstrativo]</p>
+    <div className="mx-auto flex flex-col items-center">
+      <div
+        className="relative bg-black border-[10px] border-gray-900 rounded-[2.5rem] shadow-2xl overflow-hidden"
+        style={{
+          width: "360px",
+          height: "650px",
+          maxWidth: "100vw",
+          boxShadow: "0 8px 40px 0 #0008",
+        }}
+      >
+        {/* Notch/speaker bar */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-2 w-24 h-2 bg-gray-700 rounded-full opacity-70 z-20" />
+        {/* Video or cover */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          {showVideo ? (
+            <iframe
+              src="https://res.cloudinary.com/dol86yfg6/video/upload/v1768501918/VideoExplicativo_deqqw5.mp4"
+              title="Vídeo SelfMachine"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              width="100%"
+              height="100%"
+              className="w-full h-full rounded-[2rem] border-none"
+              style={{ minHeight: 0, minWidth: 0 }}
+            />
+          ) : (
+            <div
+              className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center z-10 cursor-pointer group rounded-[2rem]"
+              onClick={() => setShowVideo(true)}
+            >
+              <div className="w-20 h-20 bg-sm-orange rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <Play className="w-10 h-10 text-sm-black ml-1" fill="black" />
+              </div>
+              <p className="font-bold text-xl text-white">
+                Clique para assistir à apresentação
+              </p>
+              <p className="text-gray-400 text-sm mt-2">
+                [Vídeo Demonstrativo]
+              </p>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }
